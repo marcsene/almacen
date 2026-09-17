@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Almacén | Tu tienda de confianza</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         ENCABEZADO
+    ========================================== -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                🏪 ALMACÉN
+            </div>
+
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#inicio">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#productos">
+                        Productos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#nosotros">
+                        Nosotros
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <button
+                class="cart-button"
+                type="button"
+                aria-label="Ver carrito"
+            >
+                🛒
+                <span id="cart-count">0</span>
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         CONTENIDO PRINCIPAL
+    ========================================== -->
+
+    <main>
+
+
+        <!-- =====================================
+             HERO
+        ====================================== -->
+
+        <section
+            id="inicio"
+            class="hero"
+        >
+
+            <div class="hero-content">
+
+                <p class="hero-label">
+                    TU ALMACÉN DE CONFIANZA
+                </p>
+
+
+                <h1>
+
+                    Todo lo que necesitas,
+
+                    <span>
+                        cerca de ti.
+                    </span>
+
+                </h1>
+
+
+                <p>
+                    Productos para tu día a día,
+                    de forma rápida y sencilla.
+                </p>
+
+
+                <a
+                    href="#productos"
+                    class="hero-button"
+                >
+                    Ver productos
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CATEGORÍAS
+        ====================================== -->
+
+        <section class="categories">
+
+            <div class="section-heading">
+
+                <p>
+                    EXPLORA
+                </p>
+
+                <h2>
+                    Categorías
+                </h2>
+
+            </div>
+
+
+            <div class="category-list">
+
+
+                <button
+                    class="category-card"
+                    type="button"
+                    data-category="Bebidas"
+                >
+
+                    🥤
+
+                    <span>
+                        Bebidas
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="category-card"
+                    type="button"
+                    data-category="Abarrotes"
+                >
+
+                    🍞
+
+                    <span>
+                        Abarrotes
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="category-card"
+                    type="button"
+                    data-category="Snacks"
+                >
+
+                    🍪
+
+                    <span>
+                        Snacks
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="category-card"
+                    type="button"
+                    data-category="Aseo"
+                >
+
+                    🧹
+
+                    <span>
+                        Aseo
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="category-card"
+                    type="button"
+                    data-category="Higiene"
+                >
+
+                    🧴
+
+                    <span>
+                        Higiene
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="category-card"
+                    type="button"
+                    data-category="Congelados"
+                >
+
+                    🍦
+
+                    <span>
+                        Congelados
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             PRODUCTOS
+        ====================================== -->
+
+        <section
+            id="productos"
+            class="products"
+        >
+
+
+            <div class="section-heading">
+
+                <p>
+                    NUESTRO CATÁLOGO
+                </p>
+
+                <h2>
+                    Productos
+                </h2>
+
+            </div>
+
+
+            <!-- Buscador + Moneda -->
+
+            <div class="search-box">
+
+
+                <input
+                    type="search"
+                    id="product-search"
+                    placeholder="🔍 Buscar productos..."
+                    autocomplete="off"
+                >
+
+
+                <select
+                    id="currency-selector"
+                    aria-label="Seleccionar moneda"
+                >
+
+                    <option value="CLP">
+                        🇨🇱 CLP — Peso chileno
+                    </option>
+
+                    <option value="USD">
+                        🇺🇸 USD — Dólar estadounidense
+                    </option>
+
+                    <option value="EUR">
+                        🇪🇺 EUR — Euro
+                    </option>
+
+                </select>
+
+
+            </div>
+
+
+            <!-- Productos generados por JavaScript -->
+
+            <div
+                id="product-list"
+                class="product-grid"
+            >
+
+                <!-- JavaScript cargará los productos -->
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =====================================
+             CARRITO
+        ====================================== -->
+
+
+<section
+    id="cart"
+    class="cart-section"
+>
+
+
+    <div class="section-heading">
+
+        <p>
+            TU COMPRA
+        </p>
+
+        <h2>
+            Carrito
+        </h2>
+
+    </div>
+
+
+    <div
+        id="cart-items"
+        class="cart-items"
+    >
+
+        <p class="empty-cart">
+            Tu carrito está vacío.
+        </p>
+
+    </div>
+
+
+    <div class="cart-summary">
+
+        <strong>
+            Total:
+        </strong>
+
+
+        <span id="cart-total">
+            $0
+        </span>
+
+    </div>
+
+
+    <button
+        id="whatsapp-button"
+        class="whatsapp-button"
+        type="button"
+    >
+
+        📱 Pedir por WhatsApp
+
+    </button>
+
+
+</section>
+        <!-- =====================================
+             NOSOTROS
+        ====================================== -->
+
+        <section
+            id="nosotros"
+            class="about"
+        >
+
+
+            <div class="section-heading">
+
+                <p>
+                    CONÓCENOS
+                </p>
+
+                <h2>
+                    Tu almacén de confianza
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                Somos un almacén pensado para facilitar
+                tus compras diarias, ofreciendo productos
+                esenciales de forma rápida, sencilla y cercana.
+
+            </p>
+
+
+        </section>
+
+
+        <!-- =====================================
+             INFORMACIÓN DEL LOCAL
+        ====================================== -->
+
+        <section class="store-info">
+
+
+            <div>
+
+                <strong>
+                    📍 Dirección
+                </strong>
+
+                <p>
+                    Av. Principal 123
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    🕐 Horario
+                </strong>
+
+                <p>
+                    Lunes a Domingo · 08:00 - 21:00
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    📱 WhatsApp
+                </strong>
+
+                <p>
+                    +56 9 1234 5678
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================
+         PIE DE PÁGINA
+    ========================================== -->
+
+    <footer>
+
+
+        <div class="footer-brand">
+
+            <strong>
+                🏪 ALMACÉN
+            </strong>
+
+            <p>
+                Tu almacén de confianza.
+            </p>
+
+        </div>
+
+
+        <div class="footer-credit">
+
+            <p>
+
+                Proyecto desarrollado por
+
+                <strong>
+                    ING.Marcsene
+                </strong>
+
+            </p>
+
+
+            <p>
+                Construyo • Aprendo • Comparto
+            </p>
+
+        </div>
+
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
